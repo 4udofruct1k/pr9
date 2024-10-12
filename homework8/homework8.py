@@ -26,5 +26,10 @@ for i in range(5):
         else:
             print("Неверный ввод")
     computer.append(ticket[i][int(comp_choise())-1])
-
+cnt = 0
+for i in range(5):
+    if user[i] == computer[i]:
+        cnt += 1
 print(f"Пользователь выбрал {user}. Компьютер выбрал {computer}")
+if cnt == 5:
+    print("Вы выиграли миллион!!!")
