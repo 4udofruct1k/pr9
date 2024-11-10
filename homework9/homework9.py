@@ -2,7 +2,7 @@ import re
 
 milo = input("Введите почту:")
 print(f"Почта пользователя: {milo}")
-razb = re.search(r'([\w\.\-\_\:]+)\@([\w\.]+)', milo)
+razb = re.search(r'([^@]+)@(.+)', milo)
 check = ["", ""]
 if "@" in milo:
     check[0],check[1] = milo.split("@")
